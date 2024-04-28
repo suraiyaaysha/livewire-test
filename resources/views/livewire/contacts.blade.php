@@ -16,8 +16,8 @@
 
             <!-- Export Buttons -->
             <div class="mb-4">
-                <button wire:click="exportPDF" class="bg-blue-500 text-white font-bold py-2 px-4 rounded-lg mr-2">Export as PDF</button>
-                <button wire:click="exportCSV" class="bg-blue-500 text-white font-bold py-2 px-4 rounded-lg">Export as CSV</button>
+                <button wire:click="exportPDF" class="bg-indigo-500 text-white font-bold py-2 px-4 rounded-lg mr-2">Export as PDF</button>
+                <button wire:click="exportCSV" class="bg-indigo-500 text-white font-bold py-2 px-4 rounded-lg">Export as CSV</button>
             </div>
 
         </div>
@@ -26,8 +26,8 @@
         <div class="my-4 flex sm:flex-row flex-col">
             <div class="flex flex-row mb-1 sm:mb-0">
                 <div class="relative">
-                    <select wire:mode.live="pagination"
-                        class="h-full rounded-l border block w-full bg-white border-gray-400 text-gray-700 py-2 px-4 pr-8 leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
+                    <select wire:model.live="perPage"
+                        class="h-full rounded-l border block w-full bg-white border-gray-400 text-gray-700 py-2 px-4 pr-8 leading-tight focus:outline-none focus:bg-white focus:border-indigo-600">
                         <option value="5">5</option>
                         <option value="10">10</option>
                         <option value="15">15</option>
@@ -43,7 +43,7 @@
                     </svg>
                 </span>
                 <input type="text" wire:model.live="q" placeholder="Search"
-                    class="appearance-none rounded-r rounded-l sm:rounded-l-none border border-gray-400 border-b block pl-8 pr-6 py-2 w-full bg-white text-sm placeholder-gray-400 text-gray-700 focus:bg-white focus:placeholder-gray-600 focus:text-gray-700 focus:outline-none" />
+                    class="appearance-none rounded-r rounded-l sm:rounded-l-none border border-gray-400 border-b block pl-8 pr-6 py-2 w-full bg-white text-sm placeholder-gray-400 text-gray-700 focus:bg-white focus:placeholder-gray-600 focus:border-indigo-600 focus:text-gray-700 focus:outline-none" />
             </div>
         </div>
         {{-- Search and filter buttons end --}}
@@ -80,7 +80,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($contacts as $contact)
+                    @foreach ($this->contacts as $contact)
                     <tr wire:key="{{$contact->id}}">
                         <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
                             {{ $contact->name }}
@@ -114,7 +114,7 @@
 
         {{-- pagination start --}}
         <div class="mt-6 mb-4">
-            {{ $contacts->links() }}
+            {{ $this->contacts->links() }}
         </div>
 
     </div>

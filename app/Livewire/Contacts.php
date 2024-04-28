@@ -6,6 +6,7 @@ use Livewire\Component;
 use App\Models\Contact;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
 use Livewire\WithPagination;
+use Livewire\Attributes\Computed;
 
 class Contacts extends Component
 {
@@ -13,29 +14,25 @@ class Contacts extends Component
     use WithPagination;
 
     public $q;
-    public $pagination=5;
+    public $perPage=5;
 
-    // public $contacts;
+    #[Computed]
+    public function contacts() 
+    {
+        if(!$this->q) {
+            return Contact::simplePaginate($this->perPage);
+        }else {
+            return Contact::where('name', 'like', '%'.$this->q.'%')
+                            ->orWhere('email', 'like', '%'.$this->q.'%')
+                            ->orWhere('gender', 'like', '%'.$this->q.'%')
+                            ->simplePaginate($this->perPage);
+        }
+    }
 
     public function render()
     {
-        // fetch contacts
-        // $contacts = Contact::latest()->paginate(5);
-        // $contacts = Contact::latest()->simplePaginate(5);
 
-        if(!$this->q) {
-            $contacts = Contact::simplePaginate($this->pagination);
-        }else {
-            $contacts = Contact::where('name', 'like', '%'.$this->q.'%')
-                                ->orWhere('email', 'like', '%'.$this->q.'%')
-                                ->orWhere('gender', 'like', '%'.$this->q.'%')
-                                ->simplePaginate($this->pagination);
-        }
-
-        // return view('livewire.contacts', compact('contacts'));
-        return view('livewire.contacts', [
-            'contacts' =>$contacts,
-        ]);
+        return view('livewire.contacts');
     }
 
     public function updatedQ()

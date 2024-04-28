@@ -12,8 +12,14 @@
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
+                    <x-nav-link wire:navigate :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
+                    </x-nav-link>
+                    <x-nav-link  wire:navigate :href="route('contact.index')" :active="request()->routeIs('contact.index')">
+                        {{ __('Contact List') }}
+                    </x-nav-link>
+                    <x-nav-link wire:navigate :href="route('contact.create')" :active="request()->routeIs('contact.create')">
+                        {{ __('Create New Contact') }}
                     </x-nav-link>
                 </div>
             </div>

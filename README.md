@@ -28,7 +28,7 @@
 ## Installing process of the project
 
 - **[First open your terminal and write git clone git@github.com:suraiyaaysha/livewire-test.git](git@github.com:suraiyaaysha/livewire-test.git)**
-- **After clone of the project setup update .env file with your local settings and create a database for this project.**
+- **After clone of the project update .env file with your local settings and create a database for this project.**
 - **Run the command: composer install**
 - **Run the command: php artisan key:generate**
 - **Run the command: php artisan serve**

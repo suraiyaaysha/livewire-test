@@ -10,7 +10,6 @@ use Livewire\Attributes\Computed;
 
 use Spatie\LaravelPdf\Facades\Pdf;
 
-
 class Contacts extends Component
 {
     use LivewireAlert;
@@ -23,18 +22,18 @@ class Contacts extends Component
     public function contacts() 
     {
         if(!$this->q) {
-            return Contact::simplePaginate($this->perPage);
+            return Contact::latest()->simplePaginate($this->perPage);
         }else {
             return Contact::where('name', 'like', '%'.$this->q.'%')
                             ->orWhere('email', 'like', '%'.$this->q.'%')
                             ->orWhere('gender', 'like', '%'.$this->q.'%')
+                            ->latest()
                             ->simplePaginate($this->perPage);
         }
     }
 
     public function render()
     {
-
         return view('livewire.contacts');
     }
 
@@ -42,7 +41,6 @@ class Contacts extends Component
     {
         $this->resetPage();
     }
-
 
     public function exportCSV()
     {
@@ -69,23 +67,11 @@ class Contacts extends Component
         return response()->stream($callback, 200, $headers);
     }
 
-    // public function exportPDF()
-    // {
-    //     $data = Contact::all(); // Corrected model name
-    //     $data = mb_convert_encoding($data, 'UTF-8', 'UTF-8');
-
-
-    //     $pdf = Pdf::loadView('myPDF', compact('data'));
-    //     // $pdf = Pdf::loadView('pdf.invoice', $data);
-    //     return $pdf->download('export.pdf');
-    // }
-
-
     public function exportPDF()
     {
-        $data = Contact::all()->toArray(); // Convert the collection to an array
+        $data = Contact::all()->toArray();
 
-            // Define a unique file name
+        // Define a unique file name
         $fileName = 'export_' . time() . '.pdf';
 
         // Define the full file path
@@ -95,8 +81,6 @@ class Contacts extends Component
         ->format('A4')
         ->save($filePath);
 
-            return response()->download($filePath);
-        }
-    
-
+        return response()->download($filePath);
+    }
 }

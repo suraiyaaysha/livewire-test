@@ -7,16 +7,22 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+## Technology Used
+
+- **Laravel 11**
+- **Livewire 3**
+- **Laravel Breeze for Authentication**
+
 ## Useful links
 
 - **[Github repo](https://github.com/suraiyaaysha/livewire-test)**
-- **[Working demo link](http://)**
+- **[Working demo link](https://www.loom.com/share/fac77fc4213f4e5facd394dfd2421023?sid=a70bbc04-dd56-45c5-bdaa-9b69d43a273a)**
 
 
 ## Dependency
 
-For using this project your PC need to install Php version 8.2, Apache/Nginx, Mysql, Laravel installer, Composer, git, node, 
-For editing code you can use VSCode/PhpStorm IDE.
+- **For using this project your PC need to install Php version 8.2, Apache/Nginx, Mysql, Laravel installer, Composer, git, node**
+- **For editing code you can use VSCode/PhpStorm IDE**
 
 
 ## Installing process of the project

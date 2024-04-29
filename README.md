@@ -7,6 +7,11 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+## Useful links
+Github repo link:https://github.com/suraiyaaysha/livewire-test
+Working demo link: 
+
+
 ## Dependency
 
 For using this project your PC need to install PHP 8.2, Apachee/Ngnix, Mysql, Laravel installer, Composer, git, node, 
@@ -25,7 +30,22 @@ For edting code you can use VSCode/PHPStorms IDE.
 --php artisan migrate:fresh --seed
 --http://127.0.0.1:8000/dashboard
 --http://127.0.0.1:8000/contacts
---http://127.0.0.1:8000/contacts
+--http://127.0.0.1:8000/contacts/create
+
+- **[First open your terminal and write git clone git@github.com:suraiyaaysha/livewire-test.git](git@github.com:suraiyaaysha/livewire-test.git)**
+- **[After clone the project setup .env file using your local setup.]**
+- **[Update .env file with your local settings and create a database for this project.]**
+- **[composer install]**
+- **[php artisan key:generate]**
+- **[php artisan serve]**
+- **[Cyber-Duck](https://cyber-duck.co.uk)**
+- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
+- **[Jump24](https://jump24.co.uk)**
+- **[Redberry](https://redberry.international/laravel/)**
+- **[Active Logic](https://activelogic.com)**
+- **[byte5](https://byte5.de)**
+- **[OP.GG](https://op.gg)**
+
 
 
 ## Laravel Sponsors
@@ -48,17 +68,6 @@ We would like to extend our thanks to the following sponsors for funding Laravel
 - **[byte5](https://byte5.de)**
 - **[OP.GG](https://op.gg)**
 
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
 
 ## License
 

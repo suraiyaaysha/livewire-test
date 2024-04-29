@@ -15,8 +15,8 @@
 
 ## Dependency
 
-For using this project your PC need to install PHP 8.2, Apachee/Ngnix, Mysql, Laravel installer, Composer, git, node, 
-For edting code you can use VSCode/PHPStorms IDE.
+For using this project your PC need to install Php version 8.2, Apache/Nginx, Mysql, Laravel installer, Composer, git, node, 
+For editing code you can use VSCode/PhpStorm IDE.
 
 
 ## Installing process of the project

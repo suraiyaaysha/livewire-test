@@ -6,18 +6,11 @@
                 <p class="mt-2 text-sm text-gray-700">You can download table data pdf or csv format</p>
             </div>
             <div class="mt-4 sm:ml-16 sm:mt-0 sm:flex-none">
-                <button type="button"
-                    class="block rounded-md bg-indigo-600 px-3 py-2 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Download</button>
-            </div>
+                <button wire:click="exportCSV" type="button"
+                    class="rounded-md bg-indigo-600 px-3 py-2 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Download CSV</button>
 
-            <!-- Search Input -->
-            {{-- <input type="text" wire:model="search" placeholder="Search Contacts..." class="border border-gray-300 shadow p-3 rounded-lg mb-4"> --}}
-            {{-- <input type="text" wire:model="search" placeholder="Search Contacts..." ... /> --}}
-
-            <!-- Export Buttons -->
-            <div class="mb-4">
-                <button wire:click="exportPDF" class="bg-indigo-500 text-white font-bold py-2 px-4 rounded-lg mr-2">Export as PDF</button>
-                <button wire:click="exportCSV" class="bg-indigo-500 text-white font-bold py-2 px-4 rounded-lg">Export as CSV</button>
+                <button wire:click="exportPDF" type="button"
+                    class="rounded-md bg-green-600 px-3 py-2 text-center text-sm font-semibold text-white shadow-sm hover:bg-green-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600">Download PDF</button>
             </div>
 
         </div>

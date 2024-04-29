@@ -20,7 +20,7 @@ For edting code you can use VSCode/PHPStorms IDE.
 
 ## Installing process of the project
 
-<!-- -- First open your terminal and write git clone git@github.com:suraiyaaysha/livewire-test.git
+-- First open your terminal and write git clone git@github.com:suraiyaaysha/livewire-test.git
 -- After clone the project setup .env file using your local setup.
 --Update .env file with your local settings and create a database for this project.
 --composer install
@@ -30,7 +30,7 @@ For edting code you can use VSCode/PHPStorms IDE.
 --php artisan migrate:fresh --seed
 --http://127.0.0.1:8000/dashboard
 --http://127.0.0.1:8000/contacts
---http://127.0.0.1:8000/contacts/create -->
+--http://127.0.0.1:8000/contacts/create
 
 - **[First open your terminal and write git clone git@github.com:suraiyaaysha/livewire-test.git](git@github.com:suraiyaaysha/livewire-test.git)**
 - **After clone the project setup .env file using your local setup.**
@@ -40,11 +40,10 @@ For edting code you can use VSCode/PHPStorms IDE.
 - **php artisan serve**
 - **npm install and npm run dev**
 - **php artisan migrate:fresh --seed**
-- **http://127.0.0.1:8000/dashboard**
-- **http://127.0.0.1:8000/contacts**
-- **http://127.0.0.1:8000/contacts/create**
+- **[Login Page](http://127.0.0.1:8000/login)**
+- **[Dashboard Page](http://127.0.0.1:8000/dashboard)**
+- **[Contacts List Page](http://127.0.0.1:8000/contacts)**
+- **[Contact Create Page](http://127.0.0.1:8000/contacts/create)**
 
 
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+That's it, thanks.

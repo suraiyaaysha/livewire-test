@@ -19,7 +19,7 @@
 - **[Working demo link](https://www.loom.com/share/fac77fc4213f4e5facd394dfd2421023?sid=a70bbc04-dd56-45c5-bdaa-9b69d43a273a)**
 
 
-## Dependency
+## Prerequisite
 
 - **For using this project your PC need to install Php version 8.2, Apache/Nginx, Mysql, Laravel installer, Composer, git, node**
 - **For editing code you can use VSCode/PhpStorm IDE**
@@ -28,13 +28,12 @@
 ## Installing process of the project
 
 - **[First open your terminal and write git clone git@github.com:suraiyaaysha/livewire-test.git](git@github.com:suraiyaaysha/livewire-test.git)**
-- **After clone the project setup .env file using your local setup.**
-- **Update .env file with your local settings and create a database for this project.**
-- **composer install**
-- **php artisan key:generate**
-- **php artisan serve**
-- **npm install and npm run dev**
-- **php artisan migrate:fresh --seed**
+- **After clone of the project setup update .env file with your local settings and create a database for this project.**
+- **Run the command: composer install**
+- **Run the command: php artisan key:generate**
+- **Run the command: php artisan serve**
+- **Run the command: npm install and npm run dev**
+- **Run the command:  php artisan migrate:fresh --seed**
 - **[Login Page](http://127.0.0.1:8000/login)**
 - **[Dashboard Page](http://127.0.0.1:8000/dashboard)**
 - **[Contacts List Page](http://127.0.0.1:8000/contacts)**
